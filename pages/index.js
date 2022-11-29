@@ -12,13 +12,29 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <main className="p-4">
-      <div
-          class="h-[35%] c-md:h-full w-full c-md:w-3/6 bg-cover bg-center rounded-t-lg c-md:rounded-t-none c-md:rounded-l-lg bg-mobile c-md:bg-desktop"
-        ></div>
+      <main className="p-4 h-full w-screen mt-6">
+        <section>
+          <div class="h-[15rem] w-[full] md:w-4/6 bg-cover bg-center bg-mobile md:bg-desktop p-4 mt-14"></div>
+          <h1 className="text-4xl text-very-dark-blue text-left font-bold w-[90%] mt-4">
+            The Bright Future of Web 3.0?
+          </h1>
+          <p className="text-dark-grayish-blue text-[0.969rem] md:text-lg font-semibold mt-4">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button className="tracking-[.3rem] w-[12rem] md:w-[15rem] h-12 bg-soft-red text-white font-semibold text-xs md:text-lg py-2 mt-6">
+            READ MORE
+          </button>
+        </section>
+
+        <section className="bg-very-dark-blue mt-12 h-[30rem] flex flex-col p-4">
+          <h2 className="text-soft-orange text-2xl font-bold">New</h2>
+        </section>
+  
       </main>
 
-      <footer className="flex justify-center items-center gap-4 p-2 w-full h-12 border-t absolute bottom-0">
+      {/* <footer className="flex justify-center items-center gap-4 p-2 w-full h-12 border-t absolute bottom-0">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -41,7 +57,7 @@ export default function Home() {
             Hugo Tiburcio
           </a>
         </p>
-      </footer>
+      </footer> */}
     </>
   );
 }
