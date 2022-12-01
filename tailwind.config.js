@@ -17,6 +17,7 @@ module.exports = {
       screens: {
         widescreen: { raw: "(min-aspect-ratio: 3/2)" },
         tallscreen: { raw: "(min-aspect-ratio: 1/2)" },
+        "c-md": "426px",
       },
       backgroundImage: {
         mobile: "url('../public/images/image-web-3-mobile.jpg')",
