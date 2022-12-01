@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <main className="p-4 h-full w-screen max-w-5xl mt-6">
+      <main className="p-4 h-full w-screen max-w-6xl mt-6">
         <section className="c-md:flex c-md:gap-6">
           <div className="w-full c-md:w-8/12">
             <div class="h-[15rem] c-md:h-3/6 w-full bg-cover bg-center bg-mobile c-md:bg-desktop p-4 mt-14"></div>
@@ -23,16 +23,16 @@ export default function Home() {
               className="md:flex md:gap-6 mt-4
             "
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-very-dark-blue text-left font-bold w-[90%] md:w-3/6 mt-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-very-dark-blue text-left font-bold w-[90%] md:w-3/6 mt-2">
                 The Bright Future of Web 3.0?
               </h1>
               <div className="md:flex md:flex-col md:w-3/6">
-                <p className="text-dark-grayish-blue text-[0.969rem] font-semibold mt-4">
+                <p className="text-dark-grayish-blue text-[1rem] font-semibold mt-2">
                   We dive into the next evolution of the web that claims to put
                   the power of the platforms back into the hands of the people.
                   But is it really fulfilling its promise?
                 </p>
-                <button className="tracking-[.3rem] w-[10.5rem] h-12 bg-soft-red text-white font-semibold text-xs py-2 mt-8 hover:bg-very-dark-blue">
+                <button className="tracking-[.3rem] w-[10.5rem] h-10 bg-soft-red text-white font-semibold text-xs py-2 mt-8 lg:mt-6 hover:bg-very-dark-blue">
                   READ MORE
                 </button>
               </div>
@@ -75,27 +75,30 @@ export default function Home() {
                 return (
                   <div
                     key={article.id}
-                    className="flex gap-3 md:gap-0  items-center h-full w-full"
+                    className="flex gap-3 md:gap-2 h-full w-full"
                   >
-                    <Image
-                      src={article.image}
-                      width={100}
-                      height={100}
-                      alt={article.title}
-                    />
+                    
+                      <Image
+                        className="object-cover"
+                        src={article.image}
+                        width={90}
+                        height={90}
+                        alt={article.title}
+                      />
+                    
                     <div
                       key={article.id}
-                      className="flex flex-col gap-2 md:gap-0 md:w-4/6 h-fit px-2 md:px-0 md:ml-4"
+                      className="flex flex-col justify-center items-start gap-y-2  md:gap-0 lg:gap-y-2 md:w-4/6 lg:w-full h-full px-2 md:px-0 md:ml-4"
                     >
-                      <h2 className="text-grayish-blue text-3xl md:text-2xl font-bold">
+                      <h2 className="text-grayish-blue text-3xl font-bold">
                         {article.number}
                       </h2>
                       <Link href={`/articles/${article.id}`}>
-                        <h4 className="text-very-dark-blue text-xl md:text-lg font-bold hover:text-soft-red">
+                        <h4 className="text-very-dark-blue text-md font-bold hover:text-soft-red">
                           {article.title}
                         </h4>
                       </Link>
-                      <p className="text-grayish-blue text-xs font-semibold">
+                      <p className="text-dark-grayish-blue text-sm font-semibold w-5/6">
                         {article.content}
                       </p>
                     </div>
