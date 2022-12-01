@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { RxCross1 } from "react-icons/rx";
 import Navlinks from "./Navlinks";
 import Sidebar from "./Sidebar";
 
@@ -43,7 +41,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="absolute top-0 w-full max-w-[1024px] flex items-center justify-between space-x-2 py-3 px-4 z-1 mt-4">
+      <nav className="absolute top-0 w-full max-w-6xl flex items-center justify-between space-x-2 py-3 px-4 z-1 mt-4">
         <Image
           className="cursor-pointer"
           src={"/images/logo.svg"}
@@ -70,67 +68,11 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* <aside
-        id="menu"
-        className="hidden c-md:hidden"
-        aria-label="sidebar"
-      >
-        <div className="w-screen h-screen fixed top-0 bg-very-dark-blue bg-opacity-60 z-40">
-          <div class="py-8 px-4 bg-white h-screen w-4/6 fixed top-0 right-0 z-50">
-            <RxCross1
-              className="h-8 w-8 absolute top-4 right-4 cursor-pointer"
-              onClick={handleCross}
-            />
-            <ul className="flex flex-col items-left justify-between md:w-[26rem] mt-20 space-y-4 text-lg">
-              <li>
-                <Link
-                  href="/"
-                  className="text-dark-grayish-blue font-semibold hover:text-soft-red"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/new"
-                  className="text-dark-grayish-blue font-semibold hover:text-soft-red"
-                >
-                  New
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/popular"
-                  className="text-dark-grayish-blue font-semibold hover:text-soft-red"
-                >
-                  Popular
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/trending"
-                  className="text-dark-grayish-blue font-semibold hover:text-soft-red"
-                >
-                  Trending
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/categories"
-                  className="text-dark-grayish-blue font-semibold hover:text-soft-red"
-                >
-                  Categories
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </aside> */}
-
-      <Sidebar onClick={() => {
-        isOpen ? setIsOpen(false) : setIsOpen(true)
-      }} />
-      
+      <Sidebar
+        onClick={() => {
+          isOpen ? setIsOpen(false) : setIsOpen(true);
+        }}
+      />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html className="w-screen h-screen m-0 p-0">
+    <Html className="w-screen m-0 p-0 lg:flex lg:flex-col lg:justify-center max-h-[50rem]">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
